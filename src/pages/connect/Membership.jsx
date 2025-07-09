@@ -5,10 +5,7 @@ import Footer from '../../components/Footer'
 function Membership() {
   return (
     <div>
-      <Header />
-
-
-      <Footer />
+     
     </div>
   )
 }
