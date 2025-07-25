@@ -28,7 +28,7 @@ function About() {
                         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
                             {/* COZ */}
                             <div className="text-center group">
-                                <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center mb-4 mx-auto shadow-sm group-hover:shadow-md transition-shadow" style={{ borderColor: '#F37E3A' }}>
+                                <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-full border-2 flex items-center justify-center mb-4 mx-auto shadow-sm group-hover:shadow-md transition-shadow" style={{ borderColor: '#F37E3A' }}>
                                     <span className="text-3xl">🎯</span>
                                 </div>
                                 <div className="text-2xl lg:text-3xl font-bold text-gray-800 mb-2" style={{ color: '#F37E3A' }}>COZ</div>
@@ -40,7 +40,7 @@ function About() {
 
                             {/* CLUB */}
                             <div className="text-center group">
-                                <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center mb-4 mx-auto shadow-sm group-hover:shadow-md transition-shadow" style={{ borderColor: '#288EC2' }}>
+                                <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-full border-2 flex items-center justify-center mb-4 mx-auto shadow-sm group-hover:shadow-md transition-shadow" style={{ borderColor: '#288EC2' }}>
                                     <span className="text-3xl">🤝</span>
                                 </div>
                                 <div className="text-2xl lg:text-3xl font-bold text-gray-800 mb-2" style={{ color: '#288EC2' }}>CLUB</div>
@@ -52,7 +52,7 @@ function About() {
 
                             {/* Result */}
                             <div className="text-center group">
-                                <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-full bg-gray-50 border-2 flex items-center justify-center mb-4 mx-auto shadow-sm group-hover:shadow-md transition-shadow" style={{ borderColor: '#6EBD49' }}>
+                                <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-full border-2 flex items-center justify-center mb-4 mx-auto shadow-sm group-hover:shadow-md transition-shadow" style={{ borderColor: '#6EBD49' }}>
                                     <span className="text-3xl">🌍</span>
                                 </div>
                                 <div className="text-2xl lg:text-3xl font-bold mb-2" style={{ color: '#6EBD49' }}>GO GLOBAL</div>
