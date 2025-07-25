@@ -8,6 +8,13 @@ const Footer = () => {
   // Helper function to check if a link is active
   const isActive = (path) => location.pathname === path;
 
+  // Function to handle link clicks and scroll to top
+  const handleLinkClick = () => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <footer className="bg-[#272727] text-gray-400 py-10 px-2">
       <div className="max-w-7xl mx-auto">
@@ -20,6 +27,7 @@ const Footer = () => {
                 <nav className="space-y-3">
                   <Link 
                     to="/connect/membership" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/connect/membership') 
                         ? 'text-[#F37E3A]' 
@@ -30,6 +38,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/consult/export-management" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/consult/export-management') 
                         ? 'text-[#F37E3A]' 
@@ -40,6 +49,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/coserve/business-processes" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/coserve/business-processes') 
                         ? 'text-[#F37E3A]' 
@@ -50,6 +60,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/contact" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/contact') 
                         ? 'text-[#F37E3A]' 
@@ -60,6 +71,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/about" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/about') 
                         ? 'text-[#F37E3A]' 
@@ -75,6 +87,7 @@ const Footer = () => {
                 <nav className="space-y-3">
                   <Link 
                     to="/why-india" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/why-india') 
                         ? 'text-[#F37E3A]' 
@@ -85,6 +98,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/terms-of-use" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/terms-of-use') 
                         ? 'text-[#F37E3A]' 
@@ -95,6 +109,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/privacy-policy" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/privacy-policy') 
                         ? 'text-[#F37E3A]' 
@@ -105,6 +120,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/refund-policy" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/refund-policy') 
                         ? 'text-[#F37E3A]' 
@@ -115,6 +131,7 @@ const Footer = () => {
                   </Link>
                   <Link 
                     to="/cancellation-policy" 
+                    onClick={handleLinkClick}
                     className={`block transition-colors ${
                       isActive('/cancellation-policy') 
                         ? 'text-[#F37E3A]' 
@@ -180,7 +197,7 @@ const Footer = () => {
           <div className="lg:col-span-3 flex flex-col items-center">
             {/* Logo */}
             <div className="mb-8">
-              <Link to="/" className="text-white text-2xl font-bold">
+              <Link to="/" onClick={handleLinkClick} className="text-white text-2xl font-bold">
                 <img
                   src="/images/footer_logo.png"
                   alt="Your Logo"

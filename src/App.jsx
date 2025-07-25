@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Producers from './pages/connect/Producers';
 import Membership from './pages/connect/Membership';
@@ -21,6 +23,17 @@ import RefundPolicy from './pages/RefundPolicy';
 import CancellationPolicy from './pages/CancellationPolicy';
 import Leads from './pages/Leads';
 import CreateLead from './pages/CreateLead';
+
+// ScrollToTop component to handle automatic scrolling on route changes
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 // Additional Page Components for Footer Routes
 // const About = () => (
@@ -100,6 +113,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop /> {/* This component will handle automatic scrolling to top on route changes */}
         <Header />
         <Routes>
           {/* Main Routes */}
