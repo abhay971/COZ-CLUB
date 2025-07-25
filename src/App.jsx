@@ -29,11 +29,46 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Multiple approaches to ensure scrolling works on all devices
+    const scrollToTop = () => {
+      // Method 1: Standard window.scrollTo
+      window.scrollTo(0, 0);
+      
+      // Method 2: Scroll the document element (for some mobile browsers)
+      document.documentElement.scrollTop = 0;
+      
+      // Method 3: Scroll the document body (fallback)
+      document.body.scrollTop = 0;
+      
+      // Method 4: For iOS Safari and other webkit browsers
+      if (document.scrollingElement) {
+        document.scrollingElement.scrollTop = 0;
+      }
+    };
+
+    // Immediate scroll
+    scrollToTop();
+    
+    // Delayed scroll to handle async route changes
+    const timeoutId = setTimeout(() => {
+      scrollToTop();
+    }, 100);
+
+    // Another delayed scroll for stubborn cases
+    const timeoutId2 = setTimeout(() => {
+      scrollToTop();
+    }, 300);
+
+    // Cleanup timeouts
+    return () => {
+      clearTimeout(timeoutId);
+      clearTimeout(timeoutId2);
+    };
   }, [pathname]);
 
   return null;
 };
+
 
 // 404 Page
 const NotFound = () => (
