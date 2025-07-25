@@ -19,6 +19,8 @@ import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import RefundPolicy from './pages/RefundPolicy';
 import CancellationPolicy from './pages/CancellationPolicy';
+import Leads from './pages/Leads';
+import CreateLead from './pages/CreateLead';
 
 // Additional Page Components for Footer Routes
 // const About = () => (
@@ -129,6 +131,8 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/cancellation-policy" element={<CancellationPolicy />} />
+          <Route path="/leads" element={<Leads />} />
+          <Route path="/create-lead" element={<CreateLead />} />
           
           {/* 404 Route */}
           <Route path="*" element={<NotFound />} />
